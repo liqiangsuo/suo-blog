@@ -5,15 +5,15 @@
       <p class="text-gray-600 dark:text-gray-400">记录技术思考与探索</p>
     </div>
 
-    <div v-if="!articles && loading" class="flex items-center justify-center py-16">
+    <div v-if="articles === null" class="flex items-center justify-center py-16">
       <div class="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
     </div>
 
-    <div v-else-if="articles && articles.length === 0" class="text-center py-16 text-gray-500 dark:text-gray-400">
+    <div v-else-if="articles.length === 0" class="text-center py-16 text-gray-500 dark:text-gray-400">
       暂无文章
     </div>
 
-    <div v-else-if="articles && articles.length > 0" class="space-y-4">
+    <div v-else class="space-y-4">
       <ArticleCard
         v-for="article in paginatedArticles"
         :key="article.path"
@@ -50,31 +50,22 @@ useHead({
 
 const pageSize = 10
 const currentPage = ref(1)
-const loading = ref(true)
-const articles = ref<Array<{title: string; description?: string; path: string; date: string; tags?: string[]}>>([])
 
-async function loadArticles() {
-  loading.value = true
+const { data: articles } = await useAsyncData('articles-list', async () => {
   try {
     const results = await queryCollection('articles')
       .select('title', 'description', 'path', 'date', 'tags')
       .all()
-    const sorted = (results || []).sort((a: any, b: any) => (b.date || '').localeCompare(a.date || ''))
-    articles.value = sorted
+    return (results || []).sort((a: any, b: any) => (b.date || '').localeCompare(a.date || ''))
   } catch {
-    articles.value = []
-  } finally {
-    loading.value = false
+    return []
   }
-}
-
-onMounted(() => {
-  loadArticles()
 })
 
-const totalPages = computed(() => Math.max(1, Math.ceil(articles.value.length / pageSize)))
+const totalPages = computed(() => Math.max(1, Math.ceil((articles.value?.length || 0) / pageSize)))
 
 const paginatedArticles = computed(() => {
+  if (!articles.value) return []
   const start = (currentPage.value - 1) * pageSize
   return articles.value.slice(start, start + pageSize)
 })

@@ -1,8 +1,11 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <BlogHeader @open-search="isSearchOpen = true" />
-    <main class="flex-1">
-      <slot />
+    <main class="flex-1 flex">
+      <BlogSidebar />
+      <div class="flex-1 min-w-0">
+        <slot />
+      </div>
     </main>
     <BlogFooter />
     <SearchModal :is-open="isSearchOpen" @close="isSearchOpen = false" />

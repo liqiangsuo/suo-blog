@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "title": "技术教程",
+      "items": [
+        { "label": "Hello World", "path": "/articles/hello-world" }
+      ]
+    },
+    {
+      "title": "生活随笔",
+      "items": [
+        { "label": "创建第一个博客", "path": "/articles/创建第一个博客" }
+      ]
+    }
+  ]
+}

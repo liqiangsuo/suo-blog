@@ -50,6 +50,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'vercel',
+    prerender: {
+      routes: ['/'],
+    },
   },
 
   site: {
@@ -58,3 +61,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-07-19',
 })
+

@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import articlesJson from '~/public/articles.json'
+import articlesJson from '~/articles.json'
 
 const route = useRoute()
 const slug = computed(() => (route.params.slug as string[]).join('/'))

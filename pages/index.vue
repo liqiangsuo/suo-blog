@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import articlesJson from '~/public/articles.json'
+import articlesJson from '~/articles.json'
 
 useHead({ title: '首页' })
 

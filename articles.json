@@ -1,0 +1,26 @@
+[
+  {
+    "title": "创建第一个博客",
+    "description": "我的第一篇博客文章",
+    "date": "2026-07-21",
+    "tags": [
+      "生活"
+    ],
+    "path": "创建第一个博客",
+    "wordCount": 24,
+    "body": "## 我的第一篇博客\n\n今天写下了第一篇博客。"
+  },
+  {
+    "title": "Hello World — 我的第一篇博客",
+    "description": "这是一篇示例文章，展示了博客支持的各种 Markdown 语法和功能",
+    "date": "2026-07-19",
+    "tags": [
+      "nuxt",
+      "markdown",
+      "hello-world"
+    ],
+    "path": "hello-world",
+    "wordCount": 27,
+    "body": "# 欢迎来到 suo的博客\n\n这是博客的第一篇文章。"
+  }
+]

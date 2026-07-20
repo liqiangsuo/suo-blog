@@ -1,0 +1,1 @@
+{"file":"ProseP-F69MeFBD.js","mappings":"","names":[],"sources":["../../../../node_modules/.pnpm/@nuxtjs+mdc@0.22.2_magic-st_47ab540253be9c51e23a440077b6be9c/node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseP.vue"],"sourcesContent":["<template>\n  <p><slot /></p>\n</template>\n"],"version":3}

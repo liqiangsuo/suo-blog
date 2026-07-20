@@ -45,3 +45,5 @@ for (const article of articles) {
 }
 writeFileSync(join(blogDir, 'public', 'articles.json'), JSON.stringify(articles, null, 2));
 console.log('Generated articles.json with ' + articles.length + ' articles');
+// Also save to project root for module import
+writeFileSync(join(blogDir, 'articles.json'), JSON.stringify(articles, null, 2));

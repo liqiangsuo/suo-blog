@@ -1,11 +1,13 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <BlogHeader @open-search="isSearchOpen = true" />
-    <div class="flex-1 flex max-w-6xl mx-auto w-full">
-      <BlogSidebar />
-      <main class="flex-1 min-w-0 px-4 sm:px-6 py-6 border-l border-[rgb(var(--color-border))]">
-        <slot />
-      </main>
+    <div class="flex-1 max-w-6xl mx-auto w-full flex">
+      <BlogSidebar class="hidden lg:block border-r border-[rgb(var(--color-border))]" />
+      <div class="flex-1 min-w-0">
+        <main class="px-4 sm:px-6 py-6">
+          <slot />
+        </main>
+      </div>
     </div>
     <BlogFooter />
     <SearchModal :is-open="isSearchOpen" @close="isSearchOpen = false" />

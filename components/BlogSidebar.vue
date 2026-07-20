@@ -22,5 +22,5 @@
 </template>
 
 <script setup lang="ts">
-import navData from '~/public/navigation.json'
+import navData from '~/navigation.json'
 </script>

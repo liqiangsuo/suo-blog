@@ -34,9 +34,14 @@ for (const file of files) {
     tags,
     path: file.replace(/\.md$/, ''),
     wordCount: body.length,
+    body: body.trim(),
   });
 }
 
 articles.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+// Also save individual article JSON files
+for (const article of articles) {
+  writeFileSync(join(blogDir, 'public', article.path + '.json'), JSON.stringify(article, null, 2));
+}
 writeFileSync(join(blogDir, 'public', 'articles.json'), JSON.stringify(articles, null, 2));
 console.log('Generated articles.json with ' + articles.length + ' articles');

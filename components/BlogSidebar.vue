@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-56 flex-shrink-0 hidden lg:block">
+  <aside class="w-56 flex-shrink-0 lg:block">
     <nav class="sticky top-16 space-y-6">
       <div v-for="section in navData.sections" :key="section.title">
         <h3 class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">

@@ -1,1 +1,0 @@
-{"version":3,"file":"ProseBlockquote-Dyb-7A2S.js","names":[],"sources":["../../../../node_modules/.pnpm/@nuxtjs+mdc@0.22.2_magic-st_47ab540253be9c51e23a440077b6be9c/node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseBlockquote.vue"],"sourcesContent":["<template>\n  <blockquote>\n    <slot />\n  </blockquote>\n</template>\n"],"x_google_ignoreList":[0],"mappings":""}

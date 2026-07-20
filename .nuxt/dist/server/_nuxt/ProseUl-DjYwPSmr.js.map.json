@@ -1,1 +1,0 @@
-{"file":"ProseUl-DjYwPSmr.js","mappings":"","names":[],"sources":["../../../../node_modules/.pnpm/@nuxtjs+mdc@0.22.2_magic-st_47ab540253be9c51e23a440077b6be9c/node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseUl.vue"],"sourcesContent":["<template>\n  <ul>\n    <slot />\n  </ul>\n</template>\n"],"version":3}

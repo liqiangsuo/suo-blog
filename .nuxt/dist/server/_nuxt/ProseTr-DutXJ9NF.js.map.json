@@ -1,1 +1,0 @@
-{"file":"ProseTr-DutXJ9NF.js","mappings":"","names":[],"sources":["../../../../node_modules/.pnpm/@nuxtjs+mdc@0.22.2_magic-st_47ab540253be9c51e23a440077b6be9c/node_modules/@nuxtjs/mdc/dist/runtime/components/prose/ProseTr.vue"],"sourcesContent":["<template>\n  <tr>\n    <slot />\n  </tr>\n</template>\n"],"version":3}
